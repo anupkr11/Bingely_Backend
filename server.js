@@ -23,6 +23,12 @@ app.use(express.json());
 // ==========================================
 // API Routes
 // ==========================================
+
+// Root endpoint message for visitors
+app.get('/', (req, res) => {
+  res.send('🎬 Welcome to the Bingely API! The server is up and running smoothly.');
+});
+
 // Mount authentication-related routes
 app.use('/api/auth', authRoutes);
 // Mount bookmark-related routes (protected by authMiddleware)
